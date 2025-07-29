@@ -1,6 +1,10 @@
 const tabuleiro = ['branco', 'branco', 'branco', '', 'preto', 'preto', 'preto']
 let selecionado = null;
 
+export function getSelecionado(){
+    return selecionado;
+}
+
 export function seleciona(posicao){
     if(selecionado === null){
         selecionado = posicao;
@@ -17,7 +21,7 @@ export function seleciona(posicao){
 }
 
 export function getTabuleiro(){
-    return [...tabuleiro]
+    return [...tabuleiro];
 }
 
 function mover(origem, destino){
